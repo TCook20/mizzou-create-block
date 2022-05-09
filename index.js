@@ -7,13 +7,13 @@ module.exports = {
 		author: 'Truman Tiger',
 		namespace: 'mizzou',
 		dashicon: 'carrot',
-		description: 'A custom block.'
+		description: 'A custom block.',
+		npmDependencies: [
+			'@university-of-missouri/mizzou-design-system'
+		],
+		npmDevDependencies: [
+			'@university-of-missouri/browserslist-config',
+			'classnames',
+		]
 	},
-	npmDependencies: [
-		'@university-of-missouri/mizzou-design-system'
-	],
-	npmDevDependencies: [
-		'@university-of-missouri/browserlist-config',
-		'classnames',
-	]
 }
