@@ -1,20 +1,20 @@
 import { registerBlockType } from '@wordpress/blocks';
 
-import metadata from '../block.json';
+import metadata from './block.json';
 import edit from './edit.js';
 import save from './save.js';
 
 const { apiVersion, name, title, attributes, category, description, icon, example } = metadata;
 
 registerBlockType(name, {
-  apiVersion,
-  name,
-  title,
-  description,
-  icon,
-  category,
-  example,
-  attributes,
-  edit,
-  save,
+	apiVersion,
+	name,
+	title,
+	description,
+	icon,
+	category,
+	example,
+	attributes,
+	edit,
+	save,
 });
