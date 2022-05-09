@@ -2,16 +2,12 @@
   "name": "@university-of-missouri/mizzou-create-block",
   "version": "0.1.0",
   "description": "Template to be used with @wordpress/create-block",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-packages/mizzou-create-block"
-  },
-  "homepage": "https://digialservice.missouri.edu/",
-  "bugs": {
-    "email": "digitalservice@missouri.edu",
-    "url": "https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-packages/mizzou-create-block/issues"
-  },
+  "license": "MIT",
+  "keywords": [
+    "wordpress",
+    "create block",
+    "block template"
+  ],
   "author": "Travis Cook <cooktw@missouri.edu>",
   "maintainers": [
     "Travis Cook <cooktw@missouri.edu>"
@@ -19,10 +15,16 @@
   "contributors": [
     "Travis Cook <cooktw@missouri.edu>"
   ],
-  "license": "MIT",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {},
+  "main": "index.js",
+  "homepage": "https://digialservice.missouri.edu/",
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-packages/mizzou-create-block"
+  },
+  "bugs": {
+    "email": "digitalservice@missouri.edu",
+    "url": "https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-packages/mizzou-create-block/issues"
+  },
   "publishConfig": {
     "@university-of-missouri:registry": "https://gitlab.com/api/v4/projects/35920704/packages/npm/"
   }
