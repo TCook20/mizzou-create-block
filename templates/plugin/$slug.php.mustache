@@ -20,6 +20,6 @@
  * Passes translations to JavaScript.
 */
 function {{namespaceSnakeCase}}_{{slugSnakeCase}}_block_init() {
-	register_block_type( __DIR__ . '/build' );
+    register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', '{{namespaceSnakeCase}}_{{slugSnakeCase}}_block_init' );

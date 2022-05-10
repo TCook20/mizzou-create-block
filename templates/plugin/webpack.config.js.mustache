@@ -2,11 +2,11 @@ const path = require( 'path' );
 const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 
 module.exports = {
-	...defaultConfig,
+  ...defaultConfig,
 
-	output: {
-		...defaultConfig.output,
-		filename: 'index.js',
-		path: path.resolve( __dirname, 'build' ),
-	},
+  output: {
+    ...defaultConfig.output,
+    filename: 'index.js',
+    path: path.resolve( __dirname, 'build' ),
+  },
 };
