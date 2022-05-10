@@ -1,8 +1,8 @@
 const { join } = require( 'path' );
 
 module.exports = {
-	blockTemplatesPath: join( __dirname, 'templates/src' ),
-	pluginTemplatesPath: join( __dirname, 'templates/block' ),
+	blockTemplatesPath: join( __dirname, 'templates/block' ),
+	pluginTemplatesPath: join( __dirname, 'templates/plugin' ),
 	defaultValues: {
 		author: 'Truman Tiger',
 		namespace: 'mizzou',
