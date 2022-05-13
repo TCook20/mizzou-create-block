@@ -12,15 +12,21 @@ module.exports = {
     wpEnv: false,
     customScripts: {
       'build': 'wp-scripts build',
-      'lint:css': 'wp-scripts lint-style',
-      'lint:js': 'wp-scripts lint-js',
+      'format': 'wp-scripts format --config @university-of-missouri/prettier-config',
+      'lint:js': 'wp-scripts lint-js --config @university-of-missouri/eslint-plugin --ignore-path .eslintignore',
+      'lint:pkg-json': 'wp-scripts lint-pkg-json',
+      'lint:style': 'wp-scripts lint-style --config @university-of-missouri/stylelint-config',
       'start': 'wp-scripts start'
     },
     npmDependencies: [
       '@university-of-missouri/mizzou-design-system'
     ],
     npmDevDependencies: [
+      '@university-of-missouri/babel-preset-default',
       '@university-of-missouri/browserslist-config',
+      '@university-of-missouri/eslint-plugin',
+      '@university-of-missouri/prettier-config',
+      '@university-of-missouri/stylelint-config',
       '@wordpress/block-editor',
       '@wordpress/blocks',
       '@wordpress/components',
