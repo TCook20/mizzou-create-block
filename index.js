@@ -8,12 +8,12 @@ module.exports = {
     namespace: 'mizzou',
     dashicon: 'carrot',
     description: 'A custom block.',
-    wpScripts: false,
+    wpScripts: true,
     wpEnv: false,
     customScripts: {
       'build': 'wp-scripts build',
       'format': 'wp-scripts format --config @university-of-missouri/prettier-config',
-      'lint:js': 'wp-scripts lint-js --config @university-of-missouri/eslint-plugin --ignore-path .eslintignore',
+      'lint:js': 'wp-scripts lint-js --config @university-of-missouri/eslint-config --ignore-path .eslintignore',
       'lint:pkg-json': 'wp-scripts lint-pkg-json',
       'lint:style': 'wp-scripts lint-style --config @university-of-missouri/stylelint-config',
       'start': 'wp-scripts start'
@@ -24,7 +24,7 @@ module.exports = {
     npmDevDependencies: [
       '@university-of-missouri/babel-preset-default',
       '@university-of-missouri/browserslist-config',
-      '@university-of-missouri/eslint-plugin',
+      '@university-of-missouri/eslint-config',
       '@university-of-missouri/prettier-config',
       '@university-of-missouri/stylelint-config',
       '@wordpress/block-editor',
