@@ -1,10 +1,11 @@
 import * as React from 'react'
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps } from '@wordpress/block-editor'
 
-function save{{slugPascalCase}}( props ) {
-  const { attributes, setAttributes } = props;
+const Save{{slugPascalCase}} = ({ attributes }) => {
+  const {  } = attributes
+  const blockProps = useBlockProps.save()
 
-  return <p>This is your custom block</p>;
+  return <p { ...blockProps }>This is your custom block</p>
 }
 
-export default save{{slugPascalCase}};
+export default Save{{slugPascalCase}};

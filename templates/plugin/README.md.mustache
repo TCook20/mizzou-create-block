@@ -2,12 +2,67 @@
 
 > {{description}}
 
-## Getting Started
-Requires node version 12.0.0 or above, and npm version 6.9.0 or above
+## Contents <!-- omit in toc -->
+
+- [Getting Started](#getting-started)
+- [Plugin Structure](#plugin-structure)
+- [Recent updates](#recent-updates)
+- [What's included](#whats-included)
+- [Versioning](#versioning)
+- [Authors](#authors)
+
+## Getting started
+
+> Requires node version 12.0.0 or above, and npm version 6.9.0 or above
+
+- clone it locally
+- run `npm install` or `yarn install`
+
+### Available Commands
+
+- `npm run lint:js` or `yarn lint:js`
+- `npm run lint:style` or `yarn lint:style`
+- `npm run lint:pkg-json` or `yarn lint:pkg-json`
+- `npm run format:js` or `yarn format:js`
 
 See [available commands](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-create-block/#available-commands) from `@wordpress/create-block`.
 
 
+## Plugin Structure
+```
+├── build/ <-- compiled block files
+├── src/ <-- block source files
+├── .editorconfig
+├── .gitignore
+├── .nvmrc
+├── README.md
+├── composer.json
+├── plugin.php
+├── package.json
+└── webpack.config.js
+```
+
+## Recent updates
+
+-   [Releases][plugin-releases]
+-   [Changelog][plugin-changelog]
+
+## What's included
+
+-   [Mizzou Design System][miz-ds]
+-   [Mizzou WordPress Base Theme][mizzou-wp-base]
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-plugins/UPDATE_ME/-/tags).
+
 ## Authors
 
--   **{{author}}** - [UPDATE ME!](https://gitlab.com/)
+-   **{{author}}** - [UPDATE](https://gitlab.com/UPDATE)
+
+See also the list of [contributors](https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-plugins/UPDATE_ME/-/graphs/master) who participated in this project.
+
+[plugin-releases]: https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-plugins/UPDATE_ME/-/releases
+[plugin-changelog]: https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/wp-plugins/UPDATE_ME/-/blob/main/CHANGELOG.md
+[mizzou-wp-base]: https://gitlab.com/university-of-missouri/mizzou-digital/wordpress/mizzou-wp-base/-/releases
+[miz-ds]: https://gitlab.com/university-of-missouri/mizzou-digital/miz-ds/mizzou-design-system

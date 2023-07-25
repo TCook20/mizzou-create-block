@@ -1,13 +1,68 @@
-const path = require( 'path' );
-const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
+const path = require('path')
+const defaultConfig = require('@wordpress/scripts/config/webpack.config')
+const sass = require('sass')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   ...defaultConfig,
 
-  output: {
-    ...defaultConfig.output,
-    filename: 'index.js',
-    path: path.resolve( __dirname, 'build' ),
+  module: {
+    ...defaultConfig.module,
+    rules: [
+      // ...defaultConfig.module.rules,
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.scss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: false,
+            },
+          },
+          {
+            loader: 'resolve-url-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+              postcssOptions: {
+                plugins: [['postcss-preset-env']],
+              },
+            },
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              implementation: sass,
+              sassOptions: {
+                includePaths: [
+                  'source/scss',
+                  'source',
+                  'node_modules/@university-of-missouri/mizzou-design-system/src/scss',
+                  'node_modules/@university-of-missouri/mizzou-design-system/src',
+                ],
+              },
+            },
+          },
+        ],
+      },
+    ],
   },
 
   resolve: {
@@ -15,14 +70,14 @@ module.exports = {
     alias: {
       Components: path.resolve(
         __dirname,
-        'node_modules/@mizzou/mizzou-design-system/src/components/',
+        'node_modules/@university-of-missouri/mizzou-design-system/src/components/',
       ),
       Layers: path.resolve(
         __dirname,
-        'node_modules/@mizzou/mizzou-design-system/src/components/Layers/',
+        'node_modules/@university-of-missouri/mizzou-design-system/src/components/Layers/',
       ),
     },
     extensions: ['.tsx', '.ts', '.jsx', '.js', '...'],
     modules: ['src', 'node_modules'],
   },
-};
+}

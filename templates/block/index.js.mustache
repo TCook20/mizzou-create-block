@@ -1,20 +1,13 @@
-import { registerBlockType } from '@wordpress/blocks';
+import { registerBlockType } from '@wordpress/blocks'
 
-import metadata from './block.json';
-import edit from './edit.js';
-import save from './save.js';
+import metadata from './block.json'
+import edit from './edit'
+import save from './save'
+import './style.scss'
 
-const { apiVersion, name, title, attributes, category, description, icon, example } = metadata;
+const { apiVersion, name, title, attributes, category, description, icon, example } = metadata
 
-registerBlockType(name, {
-  apiVersion,
-  name,
-  title,
-  description,
-  icon,
-  category,
-  example,
-  attributes,
+registerBlockType( name, {
   edit,
   save,
-});
+})

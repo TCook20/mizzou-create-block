@@ -8,6 +8,7 @@
  * License: {{license}}
  * License URI: {{{licenseURI}}}
  * Version: {{version}}
+ *
  * @author {{author}}, Digital Service, University of Missouri
  * @copyright 2022 Curators of the University of Missouri
  * @package {{namespace}}
@@ -18,9 +19,9 @@
  * the corresponding context.
  *
  * Passes translations to JavaScript.
-*/
-function {{namespaceSnakeCase}}_{{slugSnakeCase}}_block_init() {
-    register_block_type( __DIR__ . '/build' );
+ */
+function { {namespaceSnakeCase}}_{{slugSnakeCase}}_block_init() {
+	register_block_type( basename( __DIR__ ) . DIRECTORY_SEPARATOR . 'build' );
 }
 
 add_action( 'init', '{{namespaceSnakeCase}}_{{slugSnakeCase}}_block_init' );
